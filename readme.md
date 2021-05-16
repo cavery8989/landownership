@@ -4,7 +4,7 @@ Cli tool that returns a report land owned by a company and its subsidiaries.
 ## Architecture
 Apps entry point is main.ts where dependencies are set up and injected into their services.
 
-Main business logic lives in domain.ts within the generateReport function. Business logic defines and exports contracts for its dependencies meaning implementations can be swapped out with out the need for updates to the business logic itself. 
+Main business logic lives in domain.ts within the generateReport function. Business logic defines and exports contracts for its dependencies meaning implementations can be swapped without the need for updates to the business logic itself. 
 
 The gererateReport service is passed into the app function exported from app.ts where the UI is handled.
 
