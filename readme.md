@@ -1,6 +1,6 @@
 # Land ownership
 ## Description
-Cli tool that returns a report on land owned by a company and its subsidiaries.
+Cli tool that returns a report land owned by a company and its subsidiaries.
 ## Architecture
 Apps entry point is main.ts where dependencies are set up and injected into their services.
 
