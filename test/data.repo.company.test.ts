@@ -44,12 +44,12 @@ describe("companies", () => {
       const actual = await testFixture.findSubsidiaryIds("doesNotExist");
       expect(actual).toEqual([]);
     });
-    it("returns an empty array company has no subs", async () => {
+    it("returns an empty array if company has no subs", async () => {
       // 2 in the test data has no subs
       const actual = await testFixture.findSubsidiaryIds("2");
       expect(actual).toEqual([]);
     });
-    it("returns an array if ids if company has subs", async () => {
+    it("returns an array of ids if company has subs", async () => {
       // 7 in test data owns 2 and 3
       const actual = await testFixture.findSubsidiaryIds("7");
       expect(actual).toEqual(["2", "3"]);
