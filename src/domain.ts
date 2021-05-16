@@ -5,7 +5,7 @@ type Report = {
   packetsOwnedDirectly: number;
   packetsOwnedBySubs: number;
 };
-type CompanyId = string;
+
 export type Company = { id: CompanyId; name: string };
 export type Companies = {
   findById: (companyId: string) => Promise<Company | undefined>;
