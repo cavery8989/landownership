@@ -56,7 +56,7 @@ describe("companies", () => {
     });
     it("returns all ids of all subs sitting below company", async () => {
       // 1 in test data owns 6 and 7, who together 5, 2 and 3. 5 owns company 4. 2 and 3 have no subs.
-      // output should equal [6, 7, 5, 2, 3]
+      // output should equal [6, 7, 5, 2, 3, 4]
       const actual = await testFixture.findSubsidiaryIds("1");
       expect(actual).toEqual(["6", "7", "5", "4", "2", "3"]);
     });
