@@ -1,6 +1,6 @@
 # Land ownership
 ## Description
-Cli tool that returns a report land owned by a company and its subsidiaries.
+Cli tool that returns a report on land owned by a company and its subsidiaries.
 ## Architecture
 Apps entry point is main.ts where dependencies are set up and injected into their services.
 
@@ -9,7 +9,7 @@ Main business logic lives in domain.ts within the generateReport function. Busin
 The gererateReport service is passed into the app function exported from app.ts where the UI is handled.
 
 Data is loaded in using the dataloaders which pass their output into the repos that handle the
-the querying of the data sources.
+querying the data.
 
 ## Data
 Csv data is loaded into memory using a read stream that pipes its output through the readline module where it's aggregated into a more useful format. This approach was taken as the files are quite large so reading and aggregation would have blocked the event loop for a considerable amount of time if files were load in whole. Doing it this way means files can be loaded into memory in the background allowing the business logic to still take place. For example, allowing us to handle a non-existent company without having to wait for the land_ownership file to finish processing.
